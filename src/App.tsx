@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path='*' element={<h1>404 Not Found</h1>} />
+          <Route path='*' element={<h1 style={{textAlign:'center'}}>404 Not Found</h1>} />
           <Route index element={<Home/>} />
         </Route>
       </Routes>
