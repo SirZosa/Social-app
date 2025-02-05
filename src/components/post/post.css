@@ -25,3 +25,25 @@
     font-size: 0.75rem;
     color: #ccc;
 }
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.likes, .comments{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.num-of-likes{
+    color: red;width: 40px;
+    text-align: center;
+}
+
+.num-of-comments{
+    color: aliceblue;
+    
+    text-align: center;
+}
