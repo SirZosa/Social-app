@@ -22,6 +22,10 @@ export default function WriteComment({ onSubmit }: WriteCommentProps) {
             const formData = new FormData(e.currentTarget as HTMLFormElement);
             const comment = formData.get('comment') as string;
             onSubmit(comment);
+            if(textareaRef.current) {
+                textareaRef.current.value = ''
+                textareaRef.current.style.height = 'auto';
+            }
         }}>
             <textarea
                 ref={textareaRef}

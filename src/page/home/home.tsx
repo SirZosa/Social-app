@@ -12,7 +12,7 @@ export default function Home(){
     const [loading, setLoading] = useState(true);
     return(
         <section className="feed">
-            <CommentSection/>
+            
             <SkeletonComponent variant="post"/>
             <SkeletonComponent variant="comment"/>
             <Comment imgSrc={userPic} username="ososa" comment="lorem impsum omar es el mejor de todo el universo digan lo que digan malditas putas" date="9:48 2/4/2025" />
