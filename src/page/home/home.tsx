@@ -13,6 +13,7 @@ export default function Home(){
         <section className="feed">
             <WriteComment onSubmit={(comment) => console.log(comment)} />
             <SkeletonComponent variant="post"/>
+            <SkeletonComponent variant="comment"/>
             <Comment imgSrc={userPic} username="ososa" comment="lorem impsum omar es el mejor de todo el universo digan lo que digan malditas putas" date="9:48 2/4/2025" />
             <Post imgSrc={user} username="ososa" content="lorem impsum omar es el mejor de todo el universo digan lo que digan malditas putas" date="9:48 2/4/2025" />
             <Post imgSrc={user} username="johndoe" content="Just had a great day at the park!" date="10:15 2/4/2025" />
