@@ -15,7 +15,7 @@ export default function Burger({onClickProp, open}:Props){
     const bottomBurger = open ? "burger-bottom open" : "burger-bottom close";
 
     return(
-        <div className="burger-container" onClick={()=> handleClick()}>
+        <div className="burger-container" onClick={()=> handleClick()} role="button" aria-pressed={open}>
             <div className={topBurger}></div>
             <div className={bottomBurger}></div>
         </div>
