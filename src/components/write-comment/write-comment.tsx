@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import send from '../../assets/send.svg';
 import './write-comment.css';
 
@@ -6,18 +7,32 @@ type WriteCommentProps = {
 }
 
 export default function WriteComment({ onSubmit }: WriteCommentProps) {
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+    const handleInput = () => {
+        if (textareaRef.current) {
+            textareaRef.current.style.height = 'auto';
+            textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+        }
+    };
+
     return (
-        <form className="write-comment" onSubmit={(e) => {
+        <form className="write-comment" onSubmit={(e: React.FormEvent) => {
             e.preventDefault();
-            const elements = e.currentTarget.elements;
-            const commentInput = elements.namedItem('comment') as HTMLInputElement;
-            onSubmit(commentInput.value);
-            e.currentTarget.reset(); // Optionally reset the form after submission
+            const formData = new FormData(e.currentTarget as HTMLFormElement);
+            const comment = formData.get('comment') as string;
+            onSubmit(comment);
         }}>
-            <input type="text" name="comment" placeholder="Write a comment..." />
+            <textarea
+                ref={textareaRef}
+                name="comment"
+                placeholder="Write a comment..."
+                onInput={handleInput}
+                rows={1}
+            />
             <button type="submit">
                 <img src={send} alt="send" />
             </button>
         </form>
-    )
+    );
 }
