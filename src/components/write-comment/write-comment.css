@@ -36,8 +36,8 @@
     background-color: #444;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,6 +55,6 @@
 }
 
 .write-comment button img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
