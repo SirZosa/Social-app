@@ -21,11 +21,11 @@ export default function Post({imgSrc="", username, content, date, likes=0, comme
             <p className="post-content">{content}</p>
             <span className="date">{date}</span>
             <div className="icons">
-                <div className="likes">
+                <div className="likes-icon">
                     <span className="num-of-likes">{likes}</span>
                     <LottiePlayer animationDataSrc={heart} startFrame={5} endFrame={10} isActive={false} width={30} height={30}/>
                 </div>
-                <div className="comments">
+                <div className="comments-icon">
                     <span className='num-of-comments'>{commemtsNumber}</span>
                     <LottiePlayer animationDataSrc={comment} startFrame={26} endFrame={0} isActive={false} width={40} height={40} autoplay={true} loop={true}/>
                 </div>
