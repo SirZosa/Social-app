@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import WriteComment from "../write-comment/write-comment";
 import userPic from '../../assets/user.svg'
 import back from '../../assets/back.svg'
@@ -5,12 +6,27 @@ import Comment from "../comment/comment";
 import './comment-section.css'
 type CommentSectionProps = {
     postId?: string;
+    closeComments: ()=>void;
 }
-export default function CommentSection({postId}: CommentSectionProps){
+export default function CommentSection({postId, closeComments}: CommentSectionProps){
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true);
+        document.body.classList.add('body-no-scroll');
+        
+        // Cleanup: Remove the class when the component unmounts
+        return () => {
+          document.body.classList.remove('body-no-scroll');
+        };
+      }, [])
 
+      function handleClick(){
+        setMounted(false)
+        setTimeout(() => closeComments(), 300)
+      }
     return(
-        <section className="comment-section">
-            <button className="comments-close-btn">
+        <section className={`comment-section ${mounted ? 'mounted' : ''}`}>
+            <button className="comments-close-btn" onClick={handleClick}>
                 <img src={back} alt="back button" className="close-btn-img" />
             </button>
             <div className="comments">

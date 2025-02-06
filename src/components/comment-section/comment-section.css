@@ -1,14 +1,26 @@
 .comment-section {
-    position: absolute;
+    position: fixed;
     top: 4rem;
     left: 0;
+    right: 0; /* Ensure it spans the full width */
+    bottom: 0;
     z-index: 9;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 4rem); /* Full height minus 4rem for the navbar */
     padding: 1rem;
     background-color: #141414;
     border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    /* Initial position: off-screen at the bottom */
+    transform: translateY(100%);
+    /* Smooth transition for sliding */
+    transition: transform 0.3s ease;
+}
+
+.comment-section.mounted {
+    transform: translateY(0); /* Slide into view */
 }
 
 .comments-close-btn {
