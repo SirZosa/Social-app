@@ -31,6 +31,7 @@ export default function Post({imgSrc="", username, content, date, likes=0, comme
                 </div>
                 <LottiePlayer animationDataSrc={save} startFrame={1} endFrame={0} isActive={false} width={30} height={30}/>
             </div>
+            <div className="line"></div>
         </article>
     )
 }
