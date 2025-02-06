@@ -31,6 +31,7 @@ export default function LottiePlayer({isActive=false, animationDataSrc, startFra
         }
 
         const initialFrame = isActive ? animationInstance.current.totalFrames - 1 : 0;
+        animationInstance.current.setSegment(startFrame, animationInstance.current.totalFrames - endFrame);
         animationInstance.current.goToAndStop(initialFrame, true);
         if(autoplay){
             animationInstance.current.play();
@@ -47,7 +48,7 @@ export default function LottiePlayer({isActive=false, animationDataSrc, startFra
         if (onClick) {
             onClick();
         }
-        if (animationInstance.current) {
+        if (animationInstance.current && !autoplay) {
             const anim = animationInstance.current;
             
             anim.stop();
