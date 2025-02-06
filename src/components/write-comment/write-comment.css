@@ -32,7 +32,7 @@
     background-color: #444;
 }
 
-.write-comment button {
+.write-button {
     background-color: #444;
     border: none;
     border-radius: 50%;
@@ -50,11 +50,11 @@
     transform: scale(1.1);
 }
 
-.write-comment button:active {
+.write-button:active {
     transform: scale(0.95);
 }
 
-.write-comment button img {
+.write-img {
     width: 25px;
     height: 25px;
 }

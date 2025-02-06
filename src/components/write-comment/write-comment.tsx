@@ -30,8 +30,8 @@ export default function WriteComment({ onSubmit }: WriteCommentProps) {
                 onInput={handleInput}
                 rows={1}
             />
-            <button type="submit">
-                <img src={send} alt="send" />
+            <button type="submit" className='write-button'>
+                <img src={send} alt="send" className='write-img'/>
             </button>
         </form>
     );

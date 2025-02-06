@@ -5,13 +5,14 @@ import user from '../../assets/user.svg';
 import WriteComment from "../../components/write-comment/write-comment";
 import Comment from '../../components/comment/comment';
 import userPic from '../../assets/user.svg';
+import CommentSection from '../../components/comment-section/comment-section';
 import './home.css';
 export default function Home(){
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     return(
         <section className="feed">
-            <WriteComment onSubmit={(comment) => console.log(comment)} />
+            <CommentSection/>
             <SkeletonComponent variant="post"/>
             <SkeletonComponent variant="comment"/>
             <Comment imgSrc={userPic} username="ososa" comment="lorem impsum omar es el mejor de todo el universo digan lo que digan malditas putas" date="9:48 2/4/2025" />
