@@ -5,10 +5,9 @@ import back from '../../assets/back.svg'
 import Comment from "../comment/comment";
 import './comment-section.css'
 type CommentSectionProps = {
-    postId?: string;
     closeComments: ()=>void;
 }
-export default function CommentSection({postId, closeComments}: CommentSectionProps){
+export default function CommentSection({closeComments}: CommentSectionProps){
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
         setMounted(true);

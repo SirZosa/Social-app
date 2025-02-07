@@ -1,10 +1,10 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import SkeletonComponent from '../../components/skeleton/skeleton-component';
 import Post from "../../components/post/post";
 import user from '../../assets/user.svg';
 import './home.css';
 export default function Home(){
-    const [posts, setPosts] = useState([
+    const [posts] = useState([
         {
           imgSrc: user,
           username: "johndoe",
@@ -41,7 +41,6 @@ export default function Home(){
             <Post imgSrc={post.imgSrc} username={post.username} content={post.content} date={post.date} key={post.username}/>
         )
       })
-    const [loading, setLoading] = useState(true);
     return(
         <section className="feed">
             

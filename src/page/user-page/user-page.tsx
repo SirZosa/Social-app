@@ -6,7 +6,7 @@ import bg from '../../assets/3001090.jpg'
 import './user-page.css'
 export default function UserPage(){
     let params = useParams()
-    const [posts, setPosts] = useState([
+    const [posts] = useState([
         {
           imgSrc: user,
           username: `${params.id}`,
