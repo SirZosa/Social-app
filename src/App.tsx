@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Layout from './page/layout/layout'
 import Home from './page/home/home'
+import UserPage from './page/user-page/user-page'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route path='*' element={<h1 style={{textAlign:'center'}}>404 Not Found</h1>} />
+          <Route path='user/:id' element={<UserPage/>}/>
           <Route index element={<Home/>} />
         </Route>
       </Routes>

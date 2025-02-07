@@ -13,6 +13,7 @@ body{
   font-family: "Rubik", serif;
   color: aliceblue;
   width: 95%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
 }

@@ -13,6 +13,8 @@ export default function WriteComment({ onSubmit }: WriteCommentProps) {
         if (textareaRef.current) {
             textareaRef.current.style.height = 'auto';
             textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+            textareaRef.current.style.maxHeight='110px'
+            textareaRef.current.style.overflowY='scroll'
         }
     };
 

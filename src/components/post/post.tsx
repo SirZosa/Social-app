@@ -1,5 +1,6 @@
 import './post.css';
 import { useState } from 'react';
+import { Link } from 'react-router';
 import CommentSection from '../comment-section/comment-section.tsx';
 import LottiePlayer from '../lottie-player/lottie-player.tsx';
 import heart from '../../assets/heart.json';
@@ -19,7 +20,9 @@ export default function Post({imgSrc="", username, content, date, likes=0, comme
         <article className="post">
             <header className="post-header">
                 <img src={imgSrc} alt="profile pic" />
-                <span>{username}</span>
+                <Link to={`/user/${username}`}>
+                    <span>{username}</span>
+                </Link>
             </header>
             <p className="post-content">{content}</p>
             <span className="date">{date}</span>

@@ -12,6 +12,10 @@
     align-items: center;
     margin-bottom: 10px;
   }
+
+  a{
+    text-decoration: none;
+  }
   
   .post-header img {
     width: 40px;
