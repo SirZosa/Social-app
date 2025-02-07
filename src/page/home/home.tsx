@@ -47,7 +47,7 @@ export default function Home(){
             
             <SkeletonComponent variant="post"/>
             <SkeletonComponent variant="comment"/>
-            {postss ? postss:null}
+            {postss ? postss:null }
         </section>
     )
 }

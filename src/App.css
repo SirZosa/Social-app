@@ -12,7 +12,7 @@ body{
   background-color: #010;
   font-family: "Rubik", serif;
   color: aliceblue;
-  width: 95%;
+  width: 100%;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
