@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import {useState} from 'react';
+import {Link} from 'react-router'
 import Post from "../../components/post/post";
 import user from '../../assets/user.svg';
 import bg from '../../assets/3001090.jpg'
@@ -49,8 +50,8 @@ export default function UserPage(){
                 <img className="user-profile-pic" src={user} alt="user image" />
             </div>
             <div className="user-follow-info">
-                <p>Followers <span>30M</span></p>
-                <p>Following <span>300K</span></p>
+                <p><Link to={`/user/${params.id}/follow?type=followers`}>Followers</Link> <span>30M</span></p>
+                <p><Link to={`/user/${params.id}/follow?type=following`}>Following</Link> <span>300K</span></p>
                 <button className="user-follow-btn">Follow</button>
             </div>
             <div className="user-info">
