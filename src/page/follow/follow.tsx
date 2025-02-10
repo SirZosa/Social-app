@@ -1,5 +1,5 @@
 import { useLocation, Link } from 'react-router';
-import {UserCardFollowers, UserCardFollowing} from '../../components/user-card/user-card';
+import FollowSection from '../../components/follow-section/follow-section';
 import './follow.css'
 export default function Follow() {
   const location = useLocation();
@@ -12,8 +12,7 @@ export default function Follow() {
             <span className={type == 'followers' ? 'follow-active' : ''}><Link to={`${location.pathname}?type=followers`}>Followers</Link></span>
             <span className={type == 'following' ? 'follow-active' : ''}><Link to={`${location.pathname}?type=following`}>Following</Link></span>
         </div>
-        <UserCardFollowers username='ososa'/>
-        <UserCardFollowing username='ososa'/>
+        {type == 'followers' ? <FollowSection type='followers' /> : <FollowSection type='following'/>}
     </>
   );
 }
