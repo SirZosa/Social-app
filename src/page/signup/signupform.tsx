@@ -33,17 +33,17 @@ export default function SignUpForm() {
 
   return (
     <>
-      <div className="container">
-        <form onSubmit={submitForm}>
+      <div className="signup-container">
+        <form className='signup-form' onSubmit={submitForm}>
           <InputField value={firstName} type="text" fc={(e)=>setFirstName(e.target.value)}>First Name</InputField>
           <InputField value={lastName} type="text" fc={(e)=>setLastName(e.target.value)}>Last Name</InputField>
           <InputField value={userName} type='text' fc={(e) => setUserName(e.target.value)}>User name</InputField>
           <InputField value={email} type="email" fc={(e)=>setEmail(e.target.value)}>Email</InputField>
           <InputField value={password} type="password" fc={(e)=>setPassword(e.target.value)}>Password</InputField>
           <InputField value={confirmPassword} type="password" fc={(e)=>setConfirmPassword(e.target.value)}>Confirm Password</InputField>
-          <div className="buttons">
-            <button>SUBMIT</button>
-            <button onClick={resetForm}>RESET</button>
+          <div className="signup-form-buttons">
+            <button className='signup-button'>SUBMIT</button>
+            <button className='signup-button' onClick={resetForm}>RESET</button>
           </div>
         </form>
       </div>

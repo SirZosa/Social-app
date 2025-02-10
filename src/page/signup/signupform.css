@@ -1,30 +1,26 @@
-.container {
+.signup-container {
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 40px;
     border-radius: 5px;
     width: 100%;
     max-width: 400px;
+    height: calc(100vh - 4rem);
   }
 
-h1, h2{
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-form{
+.signup-form{
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
     max-width: 400px;
 }
 
-.buttons{
+.signup-form-buttons{
     display: flex;
     justify-content: space-evenly;
 }
 
-button{
+.signup-button{
     padding: 0.5rem 1rem;
     background-color: #007bff;
     color: #fff;
@@ -33,15 +29,10 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.signup-button:hover{
     background-color: #0056b3;
 }
 
-button:active{
+.signup-button:active{
     background-color: #004286;
-}
-
-.labels{
-    margin: 0.5rem 0;
-    font-size: 18px;
 }

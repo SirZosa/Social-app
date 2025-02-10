@@ -24,7 +24,7 @@ export default function Navbar(){
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="other">OTHER</NavLink>
                 </div>
                 <div className="burger-icon">
-                    <Burger arial-label="open-close" onClickProp={onClickProp} open={open}/>
+                    <Burger arial-label="button" arial-value={open} onClickProp={onClickProp} open={open}/>
                 </div>
             </div>
             <div className={`nav-container ${open ? 'open' : 'close'}`}>
