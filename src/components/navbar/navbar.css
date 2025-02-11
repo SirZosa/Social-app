@@ -9,6 +9,11 @@ nav{
     z-index: 999;
 }
 
+.burger-icon{
+    display: flex;
+    gap: 1rem;
+}
+
 .link-active{
     border-bottom: 2px solid aliceblue;
 }
@@ -70,10 +75,35 @@ nav{
     display: none;
 }
 
+.nav-links-notification-button{
+    display: flex;
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    align-self: center;
+}
+
+.nav-links-notification-button img{
+    width: 40px;
+    height: 40px;
+}
+
+.activ-notification{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top: 0;
+    right: 3px;
+    position: absolute;
+}
+
 @media (min-width:768px) {
    .nav{
     max-width: 1000px;
     margin: 0 auto;
+    
    }
 
     .nav-links{

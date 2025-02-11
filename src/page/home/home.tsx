@@ -1,9 +1,13 @@
 import {useState} from 'react';
+import {useLocation, Link} from 'react-router'
 import SkeletonComponent from '../../components/skeleton/skeleton-component';
 import Post from "../../components/post/post";
 import user from '../../assets/user.svg';
 import './home.css';
 export default function Home(){
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const type = queryParams.get('type');
     const [posts] = useState([
         {
           imgSrc: user,
@@ -43,10 +47,11 @@ export default function Home(){
       })
     return(
         <section className="feed">
-            
-            <SkeletonComponent variant="post"/>
-            <SkeletonComponent variant="comment"/>
-            {postss ? postss:null }
+          <div className='follow-nav home-follow-nav'>
+            <span className={type != 'following' ? 'follow-active' : ''}><Link to={`${location.pathname}`}>For You</Link></span>
+            <span className={type == 'following' ? 'follow-active' : ''}><Link to={`${location.pathname}?type=following`}>Following</Link></span>
+          </div>
+          {postss ? postss:null }
         </section>
     )
 }

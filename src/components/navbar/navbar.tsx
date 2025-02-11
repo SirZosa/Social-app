@@ -5,6 +5,7 @@ import logo from "../../assets/logo.png"
 import fb from '../../assets/Facebook.png'
 import ig from '../../assets/Instagram.png'
 import tw from '../../assets/Twitter.png'
+import notification from '../../assets/notification.svg'
 import "./navbar.css"
 export default function Navbar(){
     const [open, setOpen] = useState<boolean>(false);
@@ -22,8 +23,10 @@ export default function Navbar(){
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="menu">MENU</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="specials">SPECIALS</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="other">OTHER</NavLink>
+                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="activ-notification"></div></button>
                 </div>
                 <div className="burger-icon">
+                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="activ-notification"></div></button>
                     <Burger arial-label="button" arial-value={open} onClickProp={onClickProp} open={open}/>
                 </div>
             </div>

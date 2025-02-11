@@ -4,7 +4,7 @@
     left: 0;
     right: 0; /* Ensure it spans the full width */
     bottom: 0;
-    z-index: 9;
+    z-index: 11;
     display: flex;
     flex-direction: column;
     padding: 1rem;
