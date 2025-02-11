@@ -89,13 +89,13 @@ nav{
     height: 40px;
 }
 
-.activ-notification{
-    height: 10px;
-    width: 10px;
+.active-notification{
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: red;
     top: 0;
-    right: 3px;
+    right: 5px;
     position: absolute;
 }
 

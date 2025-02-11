@@ -23,10 +23,10 @@ export default function Navbar(){
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="menu">MENU</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="specials">SPECIALS</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="other">OTHER</NavLink>
-                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="activ-notification"></div></button>
+                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="active-notification"></div></button>
                 </div>
                 <div className="burger-icon">
-                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="activ-notification"></div></button>
+                    <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="active-notification"></div></button>
                     <Burger arial-label="button" arial-value={open} onClickProp={onClickProp} open={open}/>
                 </div>
             </div>
