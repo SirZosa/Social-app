@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {useLocation, Link} from 'react-router'
-import SkeletonComponent from '../../components/skeleton/skeleton-component';
 import Post from "../../components/post/post";
 import user from '../../assets/user.svg';
 import './home.css';
