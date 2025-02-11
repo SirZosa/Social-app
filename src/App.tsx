@@ -4,6 +4,7 @@ import Home from './page/home/home'
 import UserPage from './page/user-page/user-page'
 import Follow from './page/follow/follow'
 import SignUpForm from './page/signup/signupform'
+import LogIn from './page/login/login'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='user/:id/follow' element={<Follow/>}/>
           <Route index element={<Home/>} />
           <Route path='/signup' element={<SignUpForm/>}/>
+          <Route path='/login' element={<LogIn/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

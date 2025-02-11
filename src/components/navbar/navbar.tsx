@@ -20,8 +20,8 @@ export default function Navbar(){
                 <img src={logo} className="logo" alt="loco icon" onClick={()=> navigate("/")} />
                 <div className="nav-links">
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="/">HOME</NavLink>
-                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="menu">MENU</NavLink>
-                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="specials">SPECIALS</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="/login">LogIn</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="signup">Sign UP</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} to="other">OTHER</NavLink>
                     <button className="nav-links-notification-button"><img src={notification} alt="notification icon" /><div className="active-notification"></div></button>
                 </div>
@@ -33,8 +33,8 @@ export default function Navbar(){
             <div className={`nav-container ${open ? 'open' : 'close'}`}>
                 <div className="nav-container-links">
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="/">HOME</NavLink>
-                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="menu">MENU</NavLink>
-                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="specials">SPECIALS</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="/login">LOGIN</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="signup">SIGN UP</NavLink>
                     <NavLink className={({isActive}) => isActive ? "link-active" : ""} onClick={()=> setOpen(false)} to="other">OTHER</NavLink>
                 </div>
                 <div className="nav-socials">
