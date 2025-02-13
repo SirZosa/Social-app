@@ -1,0 +1,30 @@
+.notification{
+    display: flex;
+    gap:1rem;
+    background-color: #242424;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.notification-content p{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.notification-user-pic{
+    width: 50px;
+    height: 50px;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+}
+
+.notification-username{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notification-date{
+    font-size: 14px;
+    color: #666;
+}

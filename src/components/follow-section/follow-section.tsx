@@ -8,13 +8,13 @@ export default function FollowSection({type}:FollowSectionProps){
     const [followers] = useState([{username:'ososa'},{username:'jhon phon'}, {username:'another user'}, {username:'follower section'}])
     const [following] = useState([{username:'ososa'},{username:'jhon phon'}, {username:'another user'}, {username:'following section'}])
     return(
-        <div className={`follow-section`}>{type == 'followers' ? followers.map(follower => {
+        <div className={`follow-section`}>{type == 'followers' ? followers.map((follower,index) => {
           return(
-            <UserCardFollowers username={follower.username}/>
+            <UserCardFollowers key={index} username={follower.username}/>
           )
-        }): following.map(follow => {
+        }): following.map((follow,index) => {
           return(
-            <UserCardFollowing username={follow.username}/>
+            <UserCardFollowing key={index} username={follow.username}/>
           )
         })}</div>
     )
