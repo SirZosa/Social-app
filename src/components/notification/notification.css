@@ -6,10 +6,21 @@
     padding: 1rem;
 }
 
-.notification-content p{
+.notification-content{
     display: flex;
-    gap: 0.5rem;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.notification-content p{
+    align-items: center;
+}
+
+.notification-header{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+    margin-right: 0.5rem;
 }
 
 .notification-user-pic{

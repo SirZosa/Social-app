@@ -18,7 +18,8 @@ export default function Notification({username, date, type}:NotificationProps){
             <img className='notification-user-pic' src={user} alt="user image" />
             <div className='notification-info'>
                 <div className="notification-content">
-                    <p>{icon}<span className='notification-username'>{username}</span> {content}</p>
+                    <div className='notification-header'>{icon}<span className='notification-username'>{username}</span></div>
+                    <p>{content}</p>
                 </div>
                 <span className='notification-date'>{date}</span>
             </div>
